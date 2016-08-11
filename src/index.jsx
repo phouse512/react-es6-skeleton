@@ -44,7 +44,7 @@ var Navbar = React.createClass({
     return (
       <nav className="navbar navbar-light bg-faded">
         <div className="collapse navbar-toggleable-xs">
-          <a className="navbar-brand" href="#">PathFinder</a>
+          <a className="navbar-brand" href="#">React</a>
           <ul className="nav navbar-nav">
             <li className="nav-item active">
               <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>

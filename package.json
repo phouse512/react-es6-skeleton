@@ -1,11 +1,12 @@
 {
-  "name": "pathfinder",
-  "version": "0.0.1",
-  "description": "learning tool",
-  "main": "index.js",
+  "name": "react-skeleton",
+  "version": "0.1.0",
+  "description": "getting started with react and es6, built with webpack",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack -d --watch"
   },
   "keywords": [
     "react",
