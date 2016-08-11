@@ -1,16 +1,23 @@
-pathfinder
-==========
-
-To run, clone and then cd into the directory. Run `npm install` to install the
-necessary packages. Once that's done, you can run `npm start` to begin running
-the server, and you can navigate to `http://localhost:5000/` to see the page.
-
-
 react webpack es6 skeleton
---------------------------
+==========================
 
-As of this commit, this is a good starting point for a boilerplate react,
-webpack, and es6 setup. Some notes on how the project is setup:
+If you're confused by all the different tutorials out there for react,
+this is a good starting point for a boilerplate react, webpack, and es6
+setup. This is meant to be easy, so if it's not, let me know. This also
+includes bootstrap for quick development.
+
+Quickstart
+----------
+
+If you want to get the demo running locally, follow these steps:
+
+- `git clone git@github.com:phouse512/react-es6-skeleton.git`
+- `cd react-es6-skeleton`
+- `npm install` - this may take a minute or two
+- `npm run build` - when you first start, you need to bundle the js the first time
+- `npm start` - run the small express server that serves up `index.html`
+
+Some notes on how the project is setup:
 
 - the main `app.js` is the express server that serves up the `index.html` in
   the root directory.
@@ -23,5 +30,7 @@ webpack, and es6 setup. Some notes on how the project is setup:
   `BUILD_DIR` variable inside `webpack.config.js`
 - for an example of how to import local modules in your es6 code, look at the
   import inside `src/index.jsx` for the `CommentBox` class
+- if you want to dig further, `react-router` is included with a basic rendering
+  of the `Home` component, but it's not necessary to understand for now
 
 

@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack -d --watch"
+    "watch": "webpack -d --watch",
+    "build": "webpack"
   },
   "keywords": [
     "react",
