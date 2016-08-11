@@ -1,50 +1,43 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Remarkable from 'remarkable';
-import CommentBox from '/Users/PhilipHouse/Documents/Programming/pathfinder/src/Comment/commentBox';
+import Comment from './Comment/comment';
 
 import { Router, Route, Link, browserHistory } from 'react-router';
-
-var Comment = React.createClass({
-  rawMarkup: function() {
-    var md = new Remarkable();
-    var rawMarkup = md.render(this.props.children.toString());
-    return { __html: rawMarkup };
-  },
-  render: function() {
-    var md = new Remarkable();
-    return (
-      <div classNameName="comment">
-        <h2 classNameName="commentAuthor">
-          { this.props.author }
-        </h2>
-        <span dangerouslySetInnerHTML={ this.rawMarkup() } />     
-      </div>
-
-    );
-  }
-});
 
 var CommentList = React.createClass({
   render: function() {
     return (
-      <div classNameName="commentList">
+      <div className="commentList">
         <Comment author="Philip House">This is a comment</Comment>
         <Comment author="John Doe">This is *another* comment</Comment>
       </div>
-    )
+    );
   }
 });
 
 var CommentForm = React.createClass({
   render: function() {
     return (
-      <div classNameName="commentForm">
+      <div className="commentForm">
         Hello, world! I am commentForm
       </div>
     )
   }
 });
+
+var CommentBox = React.createClass({
+  render: function() {
+    return (
+      <div className="commentBox">
+        <h1>COmments</h1>
+        <CommentList /> 
+        <CommentForm />
+      </div>
+    );
+  }
+});
+
 
 var Navbar = React.createClass({
   render: function() {
@@ -66,11 +59,20 @@ var Navbar = React.createClass({
   }
 });
 
+var Home = React.createClass({
+  render: function() {
+    return (
+      <div>
+        <Navbar />
+        <CommentBox />
+      </div> 
+    );
+  }
+});
+
 ReactDOM.render((
   <Router history={browserHistory}>
-    <Route path="/" component={Navbar}>
-      <Route path="comment" component={CommentBox}>
-      </Route>
+    <Route path="/" component={Home}>
     </Route>
   </Router>
 ), document.getElementById('content'));
