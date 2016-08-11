@@ -8,5 +8,5 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-console.log("starting server now");
+console.log("starting server now, visit at http://localhost:5000/");
 app.listen(5000);
