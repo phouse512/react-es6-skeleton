@@ -2,3 +2,6 @@
 secrets.py
 .idea
 node_modules
+*.swp
+src/public/bundle.js
+src/public/bundle.js.map

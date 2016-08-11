@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Remarkable from 'remarkable';
+import CommentBox from '/Users/PhilipHouse/Documents/Programming/pathfinder/src/Comment/commentBox';
 
 import { Router, Route, Link, browserHistory } from 'react-router';
 
@@ -45,18 +46,6 @@ var CommentForm = React.createClass({
   }
 });
 
-var CommentBox = React.createClass({
-  render: function() {
-    return (
-      <div classNameName="commentBox">
-        <h1>Comments</h1>
-        <CommentList />
-        <CommentForm />
-      </div>
-    );
-  }
-});
-
 var Navbar = React.createClass({
   render: function() {
     return (
@@ -80,6 +69,8 @@ var Navbar = React.createClass({
 ReactDOM.render((
   <Router history={browserHistory}>
     <Route path="/" component={Navbar}>
+      <Route path="comment" component={CommentBox}>
+      </Route>
     </Route>
   </Router>
 ), document.getElementById('content'));
